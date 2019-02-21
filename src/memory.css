@@ -1,0 +1,24 @@
+.help {
+  color: #666;
+  margin-bottom: 10px;
+  text-align: center;
+}
+.grid {
+  border: thin solid gray;
+  line-height: 0;
+  margin-bottom: 0.75rem;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.cell {
+  border: thin solid gray;
+  display: inline-block;
+  height: 80px;
+  max-height: 15vh;
+}
+
+.message {
+  float: right;
+  font-weight: bold;
+}
