@@ -89,7 +89,6 @@ class Game extends Component {
       prevState => {
         if (this.state.gameStatus !== 'playing') return null;
         const selectedIds = [...prevState.selectedIds, index];
-        console.log(selectedIds);
         return { gameStatus: this.calcGameStatus(selectedIds), selectedIds };
       },
       () => {
@@ -101,9 +100,11 @@ class Game extends Component {
   };
 
   calcGameStatus = idArray => {
-    const sum = idArray.reduce((acc, cv) => (acc += this.challengeNumbers[cv]));
-    if (idArray.length !== this.props.answerSize) return 'playing';
+    const sum = idArray.reduce((acc, cv) => {
+      return (acc += this.challengeNumbers[cv]);
+    }, 0);
     console.log(`sum === ${sum}, target === ${this.target}`);
+    if (idArray.length !== this.props.answerSize) return 'playing';
     return sum === this.target ? 'won' : 'lost';
   };
 
