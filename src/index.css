@@ -9,7 +9,6 @@
   text-align: center;
 }
 .target {
-  border: thin solid #999;
   width: 300px;
   font-size: 45px;
   text-align: center;
@@ -20,20 +19,24 @@
   width: 100%;
   margin: 10px auto;
 }
-.number {
-  border: thin solid lightgray;
-  background-color: #eee;
+.nes-btn {
   width: 40%;
   text-align: center;
   font-size: 36px;
-  border-radius: 5px;
   margin: 1rem 5%;
   display: inline-block;
 }
+
+.is-error {
+  font-size: 27px;
+}
+
 .footer {
   display: flex;
+  flex-flow: column;
+  align-items: center;
   width: 100%;
-  justify-content: space-between;
+  justify-content: center;
 }
 .timer-value {
   color: darkgreen;
